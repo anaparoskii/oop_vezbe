@@ -117,7 +117,7 @@ public class KontrolnaTackaVezba1 {
 	
 	static void prosecneKolicine() {
 		int suma;
-		System.out.println("*** AProsečna količina artikala ***");
+		System.out.println("*** Prosečna količina artikala ***");
 		for (int i = 0; i < brojArtikala; i++) {
 			int kolicina1 = Integer.parseInt(kolicine[i][0]);
 			int kolicina2 = Integer.parseInt(kolicine[i][1]);
