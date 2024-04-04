@@ -6,16 +6,22 @@ import java.util.Date;
 public class Professor extends Person{
     private String idNumber;
     private Date dateOfEmployment;
-
-    private enum Title {
-        ASSISTANT, ASSOCIATE, FULL_PROFESSOR
-    }
+    private ProfessorTitle title;
     private ArrayList<Classes> classes;
 
+    public Professor() {
+        super();
+    }
     public Professor(String firstName, String lastName, String jmbg, String idNumber, Date dateOfEmployment) {
         super(firstName, lastName, jmbg);
         this.idNumber = idNumber;
         this.dateOfEmployment = dateOfEmployment;
+    }
+
+    public Professor(ProfessorTitle title, ArrayList<Classes> classes) {
+        super();
+        this.title = title;
+        this.classes = classes;
     }
 
     public String getIdNumber() {
@@ -40,5 +46,13 @@ public class Professor extends Person{
 
     public void setClasses(ArrayList<Classes> classes) {
         this.classes = classes;
+    }
+
+    public ProfessorTitle getTitle() {
+        return title;
+    }
+
+    public void setTitle(ProfessorTitle title) {
+        this.title = title;
     }
 }

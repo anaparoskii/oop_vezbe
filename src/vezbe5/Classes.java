@@ -3,20 +3,20 @@ package vezbe5;
 public class Classes {
     private String code;
     private String className;
-    private enum Semester {
-        FIRST(1), SECOND(2), THIRD(3),
-        FOURTH(4), FIFTH(5), SIXTH(6),
-        SEVENTH(7), EIGHTH(8);
+    private Semester semester;
+    private Professor professor;
+    private boolean activity = true;
 
-        int s;
-        private Semester(int i) {
-            this.s = i;
-        }
-    }
+    public Classes() {}
     
-    public Classes(String code, String className) {
+    public Classes(String code, String className, Semester semester) {
         this.code = code;
         this.className = className;
+        this.semester = semester;
+    }
+
+    public Classes(Professor professor) {
+        this.professor = professor;
     }
     
     public String getCode() {
@@ -33,6 +33,30 @@ public class Classes {
     
     public void setClassName(String className) {
         this.className = className;
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public Semester getSemester() {
+        return semester;
+    }
+
+    public void setSemester(Semester semester) {
+        this.semester = semester;
+    }
+
+    public boolean isActivity() {
+        return activity;
+    }
+
+    public void setActivity(boolean activity) {
+        this.activity = activity;
     }
 
 }

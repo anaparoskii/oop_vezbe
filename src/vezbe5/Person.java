@@ -5,6 +5,8 @@ public abstract class Person {
     private String lastName;
     private String jmbg;
 
+    public Person() {}
+
     public Person(String firstName, String lastName, String jmbg) {
         this.firstName = firstName;
         this.lastName = lastName;
